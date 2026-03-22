@@ -1,0 +1,161 @@
+<!-- Nota: alguns dels comentaris estan fets per a mí, per a aprendre i entendre millor conceptes que ja sabia i explicar alguns de nous que he descobert fent la pràctica com podria ser opacity al css
+ No m'he esforçat massa en els text perque suposo que no es l'important d'aquesta pràctica-->
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!--icones-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="icon" type="image/png" href="images/Logo.png"><!--favicon-->
+
+</head>
+<body>
+    
+    <!--MENÚ-->
+    <nav class="menu"> 
+        <ul>
+            <li><a href="#nosaltres">Nosaltres</a></li>
+            <li><a href="#carta">Carta</a></li>
+            <li><a href="#galeria">Galeria</a></li><!--Els href serveixen per a anar directament a onn estigui l'id
+            que coincideix amb aquest # al donar a un element de la llista. Si li donem a nosaltres, anirà a on hi hagi id nosaltres-->
+        </ul>
+    </nav> <!-- Està fora del header perquè necessitem que el pare sigui 
+            el body per a que el sticky funcioni al css (no volem arrossegar tot el header)-->
+
+
+    <!--Boto de reserva-->
+    <a href="#reserva" class="btn-reservar">Reservar</a>
+
+    
+    <!--CAPÇALERA-->
+    <header>
+        <img src="images/imatge_restaurant.jpg" alt="Imatge principal del restaurant">
+        <div class="titol">
+            <h1>Restaurant Els Coberts</h1>
+            <p>El bon gust a la teva taula</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!--SOBRE NOSALTRES-->
+        <section id="nosaltres" class="container"><!--aquest id fa que ens porti aqui el nosaltres del menú-->
+            <h2>Sobre nosaltres</h2>
+
+            <div class="fila">
+                <img src="images/trabajadores_restaurante.webp" alt="Imatge dels treballadors del restaurant">
+                <p>Som un equip de 5 treballadors. 2 cuiners i 3 cambrers. Som un grup d'amics que va començar aquest negoci fa 6 anys i seguiex treballant des d'aquell moment.</p>
+            </div>
+
+            <div class="fila"><!--No fa falta fer row reverse per que a aquesta posem abans el text que l'imatge-->
+                <p>El restaurant, ubicat a plaça Universitat a Barcelona, té capacitat per a 60 persones. El caracteritza un estil natural gràcies a la gran quantitat de plantes que hi ha al restaurant.</p>
+                <img src="images/imatge_restaurant_secundaria.jpg" alt="Imatge del restaurant">
+            </div>
+        </section>
+
+
+        <!--CARTA-->
+        <section id="carta" class="container"> <!-- l'id fa que el carta del menú ens porti aquí-->
+            <h2>Carta</h2>
+            <div class="titol-menu">Menú</div>
+
+            <div class="carta-grid">
+
+                <!--Primer menú-->
+                <div class="menu1">Menú 1</div>
+
+                <div class="contingut1">
+                    <h3>Contingut</h3>
+                    <p>Menú d'estil mediterrani amb una pasta amb espècies i llimona de la millor qualitat a més d'una gran varietat d'entrants per a que el client esculli al seu gust.</p>
+                </div>
+                
+                <div class="plato img1">
+                    <img src="images/pasta.webp" alt="pasta">
+                    <span>pasta</span>
+                </div>
+
+                <div class="plato img2">
+                    <img src="images/entrantes.webp" alt="entrants">
+                    <span>entrants</span>
+                </div>
+
+
+                <!--Segon menú-->
+                 <div class="menu2">Menú 2</div>
+
+                    <div class="contingut2">
+                        <h3>Contingut</h3>
+                        <p>Menú d'estiu amb una amanida fresca feta amb verdures de proximitat i un lluç del mediterrani cuinat amb espècies a foc lent</p>
+                    </div>
+
+
+                    <div class="plato img3">
+                        <img src="images/amanida.jpg" alt="amanida">
+                        <span>amanida</span>
+                    </div>
+
+                    <div class="plato img4">
+                        <img src="images/peix.jpg" alt="peix">
+                        <span>peix</span>
+                    </div>
+
+                </div>
+
+            </div>
+        
+        </section>
+        
+        <!--GALERIA-->
+        <section id="galeria" class="container"> <!--Quan prenem la galeria del menú ens porta aquí-->
+            <h2>Galeria d'imatges</h2>
+
+            <div class="galeria">
+                <img src="images/imatge_restaurant.jpg" alt="Imatge principal del restaurant">
+                <img src="images/trabajadores_restaurante.webp" alt="Imatge dels treballadors del restaurant">
+                <img src="images/imatge_restaurant_secundaria.jpg" alt="Imatge del restaurant">
+                <img src="images/pasta.webp" alt="pasta">
+                <img src="images/entrantes.webp" alt="entrants">
+                <img src="images/amanida.jpg" alt="amanida">
+                <img src="images/peix.jpg" alt="peix">
+                <img src="images/Logo.png" alt="Imatge del restaurant a la part de l'entrada">
+            </div>
+        </section>
+
+
+       
+
+        <!-- Formulari-->
+        <form id="reserva" class="container">
+            <h2>Reserva</h2>
+
+            <input type="text" placeholder="Nom">
+            <input type="number" placeholder="Número de persones">
+            <input type="date">
+            <input type="text" placeholder="hora en format hh:mm"><!-- també es podria fer amb un input time que pot ser quedaria més bonic però a la vegada menys descriptiu si no 
+            poses a dalt que es un input per a posar la hora-->
+            <textarea placeholder="Descripció"></textarea>
+
+            <button type="submit">Reservar</button>
+        </form>
+
+    </main>
+
+    <footer>
+
+        <div>
+            <p><span class="material-symbols-outlined">alternate_email</span>ElsCoberts@gmail.com </p>
+            <p><span class="material-symbols-outlined">phone_enabled</span>+34 620 18 84 36 </p>
+        </div>
+
+        <div>
+            <img class="logo" src="images/Logo.png" alt="logo">
+        </div>
+
+    </footer>
+
+</body>
+</html>

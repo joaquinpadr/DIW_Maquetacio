@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*Aquesta es la font principal, Montserrat. Es podria haver posat a l'HTML amb un link, però m'agrada més fer-ho així*/
+
+:root{
+    --color-principal: black;
+    --color-secundari: #c59d5f;
+    --mida-font: 16px; /*Mida per defecte*/
+    --color-fons: #f4f4f4;
+    --font-principal: 'Montserrat', sans-serif; 
+}
+
+/*Eliminar el scroll horitzontal*/
+html, body{
+    overflow-x: hidden;
+}
+
+/*MENU*/
+.menu{
+    position: sticky;
+    background: var(--color-fons);
+    z-index: 3; /*Poso un 3 per a asegurar que quedi sempre a dalt*/
+}
+
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+    gap:1rem;
+    padding:1rem;
+    list-style: none;/*Per a quitar els punts o números de la llista,
+    serveix per als ul*/
+}
+
+.menu a{
+    color:black;
+    text-decoration: none; /*Per a quitar el subrayat predeterminat
+    i posar-lo només amb el hover, serveix sobretot per els a*/
+    
+}
+
+.menu a:hover{
+    text-decoration: underline; /*Per a posar la linia quan passes el cursor*/
+}
+
+/*BOTÓ RESERVA*/
+.btn-reservar{
+    position:fixed;
+    bottom: 2rem;
+    right:1rem;
+    background:var(--color-secundari);
+    color:white;
+    padding:1rem;
+    z-index: 3; /*Per a que estigui sempre a dalt*/
+}
+
+/* HEADER*/
+header{
+    position:relative;
+}
+
+header img{
+    width:100%;
+    opacity: 0.5;/*Per a que es vegi el text per sobre de la imatge
+    ja que no m'agrada el text en blanc. Per a temes d'accesibilitat
+    que es vegi bé el text es essencial*/
+}
+
+header h1{
+    font-size: 4rem;
+}
+
+header p{
+    font-size: 2rem;
+}
+
+
+.titol{
+    position:absolute;
+    top: 35%;
+    left: 3%;
+    border: 3px solid black;
+}
+.titol p{
+    font-weight: bold; /*he de fer això per a que es vegi bé el text*/
+}
+
+
+/*CONTENIDORS*/
+.container{
+    max-width: 75rem;
+    margin:auto;
+    padding:2rem;
+}
+
+/*SOBRE NOSALTRES*/
+.fila{
+    display:flex;
+    gap:2rem;
+    margin:2rem 0;
+}
+
+.fila img{
+    width:12rem;
+    border-radius:1rem;
+}
+
+
+/*CARTA*/
+.titol-menu{
+    border:1px solid black;
+    text-align:center;
+    padding:1rem;
+    margin:2rem 0;/*Un margin de 2 rem adalt y abaix i 0 als costats*/
+}
+
+.carta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "menu1 cont1 cont1"
+        "menu1 img1 img2"
+        "menu2 cont2 cont2"
+        "menu2 img3 img4";
+    gap: 1rem;
+}
+
+/* ÁREAS */
+.menu1 { grid-area: menu1; }
+.contingut1 { grid-area: cont1; }
+.img1 { grid-area: img1; }
+.img2 { grid-area: img2; }
+.menu2 { grid-area: menu2; }
+.contingut2 { grid-area: cont2; }
+.img3 {grid-area: img3;}
+.img4 {grid-area: img4;}
+
+.menu1, .menu2{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+    
+}
+
+
+.plato {
+    text-align: center;
+    position: relative;
+    overflow: hidden;/*Per a que el text no es vegi si es surt de l'imatge*/
+}
+
+.plato span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block; /*Fa falta posar-lo per a que el text es centri juntament amb el right, o no posar el right i posar width 100% per a que ocupi tot l'espai*/           
+    color: var(--color-principal);
+    padding: 0.5rem;
+    font-weight: 700; /*molt fort per a que es vegi bé*/
+    /*Amb background es podria posar un fons a les lletres*/
+}
+
+.plato img {
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+
+/*GALERIA*/
+.galeria{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.galeria img{
+    width:calc(25% - 1rem);
+    margin:0.5rem;
+    border:2px solid black;
+    box-sizing: border-box;
+}
+
+.galeria img:hover{
+    filter:brightness(50%);
+    border:3px solid red;
+}
+
+/*FORMULARI*/
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1rem;
+}
+
+form h2{
+    grid-column: span 2;/*Per a que el h2 del formulari ocupi tot l'espai 
+    de la primera fila i el nom no es posi al costat*/
+}
+textarea{
+    grid-column: span 2;
+}
+
+/*també es podria fer amb un grid-template-areas i definir 5 columnas (o 3 si deixem fora reserva i el botó reservar i anar posant 
+elements posant el element descripcio dues vegadas a baix per a que la descripció ocupi 2 
+(i els reserva també 2 vegades si els decidim deixar i no psar un div aidiconal)*/ 
+
+
+/*FOOTER*/
+footer{
+    display:flex;
+    justify-content:space-between;
+    padding:1rem;
+    background:var(--color-fons); 
+}
+
+
+footer p{
+    display:inline-flex; /*Per a posar el telefon i el gmail en linia*/
+    margin-right: 1rem; /*Marge entre el telefon i el mail*/
+}
+    
+
+/*LOGO*/
+.logo{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.material-symbols-outlined {
+  vertical-align: middle;
+} /*Serveix per a alinear verticalment les icones amb el text, ja que sino
+el mail queda malament*/
+
+
+
