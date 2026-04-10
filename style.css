@@ -175,16 +175,21 @@ header p{
     justify-content:center;
 }
 
+/*Multimedia canvis a les imatges de la galeria per a afegir transicions*/
+
 .galeria img{
     width:calc(25% - 1rem);
     margin:0.5rem;
     border:2px solid black;
     box-sizing: border-box;
+    /*transition: all 10s cubic-bezier(0.39, 0.575, 0.565, 1);*/
 }
 
 .galeria img:hover{
     filter:brightness(50%);
     border:3px solid red;
+    /*transform: rotate(60deg) scale(5);
+    filter: saturate(8); esto es de las transiciones*/
 }
 
 /*FORMULARI*/
