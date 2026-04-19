@@ -236,4 +236,162 @@ footer p{
 el mail queda malament*/
 
 
+/*--------------------------------------------*/
+/*ACTIVITAT 10 MEDIA QUERIES*/
+
+
+/*----------------------------------------------*/
+/*Media querie de tablet 768 px*/
+@media (max-width: 768px) {
+
+    /* MENÚ */
+    .menu ul {
+        justify-content: center;
+    }
+
+    /* HEADER */
+    header h1 {
+        font-size: 2.2rem; /* Per a que el text sobre la imatge quedi centrar*/
+    }
+
+    header p {
+        font-size: 1.5rem;
+    }
+
+    .titol {
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    /* SOBRE NOSALTRES en 1 columna el primer i 2 el segon */
+    .fila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fila img {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    /* CARTA en 2 columnes*/
+    .carta-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "menu1 cont1"
+            "img1 img2"
+            "menu2 cont2"
+            "img3 img4";
+    }
+
+    /* GALERIA en 2 columnes */
+    .galeria img {
+        width: calc(50% - 1rem);/*El mateix que a la galeria general però amb un calcul diferent*/
+    }
+
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    /* Igual que al de mobil, ocultem el logo */
+    .logo {
+        display: none;
+    }
+}
+
+
+/*Media querie de mobil 576px*/
+@media (max-width: 576px) {
+
+    /* MENÚ */
+    .menu ul {
+        justify-content: center;
+        gap: 0.5rem;
+    }
+ 
+    /* HEADER */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .titol h1 {
+        font-size: 1.8rem; /* Per a quedi bé sobre la imatge el titol fa falta fer més petita la lletra i reduir el top */
+        /*Al wireframe no surt que hi hagi d'haver el titol pero jo suposo que sí que ha d'estar, si no es faria un display none i ja*/
+    }
+
+    .titol p {
+        font-size: 1.2rem; /* Més petit per a que quedi sobre la imatge*/
+    }
+
+    .titol {
+        left: 50%;
+        top: 20%;
+        transform: translateX(-50%); /* Serveix per a que una vegada posat el titol a left que deixa l'element començant a la meitat dle contenidor, es posi l'element centrar, ja que agafa un 50% de la longitud de l'element i la tira cap enrera del contenidor. Si tinc un container de 300px
+        i un element de 100 px faria 150 px cap a la esquerra, el que faria que hi hagues un margin de 150 px a l'esquerra i 50 px a la dreta, el transform agafa la meitat de l'element, 50px, i tira l'element cap enrere aquest 50px, amb loque el margin queda a 100px a cada costat, s'utilitza
+        aixo per que es absolut i aquests no poden utilitzar margin i text align*/
+        text-align: center;
+    }
+
+    /* SOBRE NOSALTRES */
+    .fila {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fila img {
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+    }
+
+    /* CARTA en 1 columna perque aixi ho demana el wireframe */
+    .carta-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "menu1"
+            "cont1"
+            "img1"
+            "img2"
+            "menu2"
+            "cont2"
+            "img3"
+            "img4";
+    }
+
+    /* GALERIA 1 columna */
+    .galeria img {
+        width: calc(100%);/*Per a que cada imatge ocupi el 100%*/
+    }
+
+    /*Com el formulari el decidiem nosaltres supooso que ara també i llavors no canvio res d'això*/
+
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    /*Al wireframe no surt el logo ni a tablet ni a movil i per tant l'elimino (o no el mostro més concretament) ho faig amb display none perquè amb hidden no és una bona pràctica*/
+    .logo {
+        display: none;
+    }
+}
+
+
+
+
 
