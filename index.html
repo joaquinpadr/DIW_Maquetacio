@@ -132,10 +132,17 @@
         <form id="reserva" class="container">
             <h2>Reserva</h2>
 
-            <input type="text" placeholder="Nom">
-            <input type="number" placeholder="Número de persones">
-            <input type="date">
-            <input type="text" placeholder="hora en format hh:mm"><!-- també es podria fer amb un input time que pot ser quedaria més bonic però a la vegada menys descriptiu si no 
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" placeholder="Nom">
+
+            <label for="persones">Número de persones</label>
+            <input type="number" id="persones" placeholder="Número de persones">
+            
+            <label for="data">Data</label>
+            <input type="date" id="data">
+
+            <label for="descripcio">Descripció</label>
+            <input type="text" id="descripcio" placeholder="hora en format hh:mm"><!-- també es podria fer amb un input time que pot ser quedaria més bonic però a la vegada menys descriptiu si no 
             poses a dalt que es un input per a posar la hora-->
             <textarea placeholder="Descripció"></textarea>
 
