@@ -47,7 +47,7 @@ html, body{
     bottom: 2rem;
     right:1rem;
     background:var(--color-secundari);
-    color:white;
+    color:rgb(17, 16, 16);
     padding:1rem;
     z-index: 3; /*Per a que estigui sempre a dalt*/
 }
