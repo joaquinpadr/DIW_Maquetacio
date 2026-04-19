@@ -159,6 +159,7 @@ header p{
     padding: 0.5rem;
     font-weight: 700; /*molt fort per a que es vegi bé*/
     /*Amb background es podria posar un fons a les lletres*/
+    background-color: rgba(255, 255, 255, 0.8); /*Finalment he afegit el background color per temes d'usabilitat i he afegit transparencia per a que es vegi bé del tot*/
 }
 
 .plato img {
