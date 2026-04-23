@@ -9,14 +9,10 @@
     --font-principal: 'Montserrat', sans-serif; 
 }
 
-/*Eliminar el scroll horitzontal*/
-html, body{
-    overflow-x: hidden;
-}
-
 /*MENU*/
 .menu{
     position: sticky;
+    top: 0;
     background: var(--color-fons);
     z-index: 3; /*Poso un 3 per a asegurar que quedi sempre a dalt*/
 }
@@ -234,6 +230,10 @@ footer p{
   vertical-align: middle;
 } /*Serveix per a alinear verticalment les icones amb el text, ja que sino
 el mail queda malament*/
+
+*{
+    max-width: 100%;
+}
 
 
 
