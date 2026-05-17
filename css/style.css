@@ -244,7 +244,7 @@ TRANSICIONS
 
 /* Exercici 1 apartat 1*/
 .galeria img{
-    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: transform 0.5s, filter 0.5s;
 }
 
 .galeria img:hover{
@@ -258,9 +258,9 @@ TRANSICIONS
 
 .btn-reservar{
     transition:
-        background 0.4s ease,
-        transform 0.4s ease,
-        border-radius 0.4s ease;
+        background 0.4s,
+        transform 0.4s,
+        border-radius 0.4s;
 }
 
 .btn-reservar:hover{
@@ -272,7 +272,7 @@ TRANSICIONS
 
 /*Exercici 2*/
 .titol{
-    animation: animacioHeader 3s ease forwards;
+    animation: animacioHeader 3s;
 }
 
 @keyframes animacioHeader{
@@ -394,8 +394,8 @@ a les 2 imatges del sobre nosaltres*/
     cursor:pointer;
 
     transition:
-        transform 0.3s ease,
-        text-shadow 0.3s ease;
+        transform 0.3s,
+        text-shadow 0.3s;
 }
 
 /* el hover de les icones */
