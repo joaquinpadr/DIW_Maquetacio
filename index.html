@@ -137,19 +137,19 @@
             
             <div class="video-controls">
 
-                <span class="material-symbols-outlined" id="playBtn">
+                <span class="material-symbols-outlined" onclick="playVideo()">
                     play_circle
                 </span>
 
-                <span class="material-symbols-outlined" id="pauseBtn">
+                <span class="material-symbols-outlined" onclick="pauseVideo()">
                     pause_circle
                 </span>
 
-                <span class="material-symbols-outlined" id="volumeBtn">
+                <span class="material-symbols-outlined" onclick="unmuteVideo()">
                     volume_up
                 </span>
 
-                <span class="material-symbols-outlined" id="muteBtn">
+                <span class="material-symbols-outlined" onclick="muteVideo()">
                     volume_off
                 </span>
 
@@ -203,7 +203,7 @@
 
 <!-- Part JS per a l'exercici 4 -->
 <script>
-
+/*Aquesta es una manera de fer-ho, com he vist que no esta als apunts ho faig amb onlick
     const video = document.getElementById("videoRestaurant");
 
     const playBtn = document.getElementById("playBtn");
@@ -212,30 +212,49 @@
     const volumeBtn = document.getElementById("volumeBtn");
     const muteBtn = document.getElementById("muteBtn");
 
-    /* play */
+     play
 
     playBtn.addEventListener("click", () => {
         video.play();
     });
 
-    /* pause */
+    pause
 
     pauseBtn.addEventListener("click", () => {
         video.pause();
     });
 
-    /* volumen */
+    volumen
 
     volumeBtn.addEventListener("click", () => {
         video.muted = false;
     });
 
-    /* silenciar */
+    silenciar
 
     muteBtn.addEventListener("click", () => {
         video.muted = true;
     });
+*/
 
+/* Version amb Onlick */
+ const video = document.getElementById("videoRestaurant");
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+    }
+
+    function unmuteVideo() {
+        video.muted = false;
+    }
+
+    function muteVideo() {
+        video.muted = true;
+    }
 </script>
 
 </body>
