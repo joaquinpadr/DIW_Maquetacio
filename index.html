@@ -255,6 +255,27 @@
     function muteVideo() {
         video.muted = true;
     }
+
+
+    /* Part 2 de l'exercici 5*/
+
+    window.onscroll = function(){
+
+        let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+        if(scroll > 1324){ /*Aquest és el punt en el que aproximadament apareix el video, no es exacte al 100%*/
+                            /*Es pot fer que sigui exacte al 100% però no d'una manera apresa a classe*/
+
+            video.play();
+
+        }else{
+
+            video.pause();
+
+        }
+
+    }
+
 </script>
 
 </body>
